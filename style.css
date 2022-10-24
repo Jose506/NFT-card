@@ -1,0 +1,109 @@
+:root {
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+/*Neutral*/ 
+
+    --veryDarkBluebgMain: hsl(217, 54%, 11%);
+    --veryDarkBluebgCard: hsl(216, 50%, 16%);
+    --veryDarkBluebgLine: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*, *::before,*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background:  var(--veryDarkBluebgMain);
+    letter-spacing: normal;
+}
+
+.nft-cardComponent{
+    position: absolute;
+    left: calc(50% - 175px);
+    top: calc(50% - 292px);
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    background: var(--veryDarkBluebgCard);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: -1px 22px 45px 11px rgba(0,0,0,0.15);
+}
+
+.nft-cardComponent__img{
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: .5rem;
+}
+
+.nft-cardComponent-desc h1 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: var(--white);
+}
+
+.nft-cardComponent-desc h1:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.nft-cardComponent-desc p {
+    font-size: 1.1rem;
+    font-weight: lighter;
+    color: var(--Softblue);
+    margin-bottom: 0;
+}
+
+.nft-cardComponent-info{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px  solid var(--veryDarkBluebgLine);
+    padding: 1.5rem 0;
+}
+
+
+.nft-cardComponent-info__count,
+.nft-cardComponent-info__time {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+}
+
+.nft-cardComponent-info__count {
+    font-weight: bold;
+    color: var(--Cyan);
+}
+.nft-cardComponent-info__time  {
+    color: var(--Softblue);
+}
+
+.nft-cardComponent-footer {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
+}
+
+.nft-cardComponent-footer img{
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid var(--white);
+    border-radius: 50%;
+}
+
+.nft-cardComponent-footer p {
+    color: var(--Softblue);
+}
+
+.nft-cardComponent-footer p > span {
+    color: var(--white);
+}
+
+.nft-cardComponent-footer p > span:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
